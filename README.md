@@ -62,8 +62,8 @@ IDE juga secara otomatis memperbarui kelas status ke extend State, yang menunjuk
 
 membuat statefull widget
 
-class MyApp extends StatelessWidget {
-    @override
+	class MyApp extends StatelessWidget {
+   	 @override
     Widget build(BuildContext context) {
   	      final wordPair = WordPair.random();
       return MaterialApp(
