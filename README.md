@@ -229,3 +229,17 @@ State<RandomWords> createState() => _RandomWordsState();
 Sejauh ini kita telah menjalankan aplikasi Anda dalam mode debug . Mode debug memperdagangkan kinerja untuk fitur pengembang yang berguna seperti hot reload dan step debugging. Bukan hal yang tidak terduga untuk melihat kinerja yang lambat dan animasi yang tersendat-sendat dalam mode debug. Setelah Anda siap untuk menganalisis kinerja atau merilis aplikasi, Anda dapat menggunakan mode build "profil" atau "rilis" Flutter.\
   
 # Write Your First Flutter App, part 2
+   1. Introduction
+	Flutter adalah toolkit UI Google untuk membuat aplikasi cantik yang dikompilasi secara native untuk seluler, web, dan desktop dari satu basis kode. Flutter bekerja dengan kode yang ada, digunakan oleh pengembang dan organisasi di seluruh dunia, dan gratis serta open source.
+
+Dalam codelab ini, Anda akan memperluas aplikasi Flutter seluler dasar untuk menyertakan interaktivitas. Anda juga akan membuat halaman kedua (disebut rute) yang dapat dinavigasi oleh pengguna. Terakhir, Anda akan memodifikasi tema (warna) aplikasi.
+  2. Tambahkan ikon ke daftar
+     Pada langkah ini, Anda akan menambahkan ikon hati ke setiap baris. Pada langkah berikutnya, Anda akan membuatnya dapat diketuk dan menyimpan favorit.
+    
+	add a _saved Set to _RandomWordsState. This Set stores the word pairings that the user favorited. Set is preferred to List because a properly implemented Set doesn't         allow duplicate entries.
+	class _RandomWordsState extends State<RandomWords> {
+  final _suggestions = <WordPair>[];
+  final _saved = <WordPair>{};     // NEW
+  final _biggerFont = TextStyle(fontSize: 18.0);
+  ...
+}
