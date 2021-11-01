@@ -85,9 +85,9 @@ class _RandomWordsState extends State { final _suggestions = []; final _saved = 
 
 Jika app di reload maka akan dapat dilihat bedanya sekarang sudah ada icon hati Membuat icon hati dapat berinteraksi ketika disentuh
 
-Widget _buildRow(WordPair pair) {
-  final alreadySaved = _saved.contains(pair);
-  return ListTile(
+	Widget _buildRow(WordPair pair) {
+ 	 final alreadySaved = _saved.contains(pair);
+  	return ListTile(
     title: Text(
       pair.asPascalCase,
       style: _biggerFont,
@@ -110,10 +110,10 @@ Widget _buildRow(WordPair pair) {
 }
 Sekarang jika disentuh maka icon hati akan berubah warna merah tanda item sudah difavoritkan. Membuat aplikasi dapat berpindah dengan "navigator" dengan kode dibwh ini
 
-class _RandomWordsState extends State<RandomWords> {
-  ...
-  @override
-  Widget build(BuildContext context) {
+	class _RandomWordsState extends State<RandomWords> {
+	  ...
+ 	 @override
+ 	 Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
 	title: Text('Startup Name Generator'),
@@ -139,9 +139,9 @@ Menambahakan list favorit sebagai tempat item item favorit void _pushSaved() { }
         body: ListView(children: divided),
       );
     },
-  ), // ...to here.
-);
-}
+	  ), // ...to here.
+	);
+	}
 
 Membuat tema untuk aplikasi
 
@@ -149,35 +149,35 @@ class MyApp extends StatelessWidget { @override Widget build(BuildContext contex
 
 Reload maka aplikasi sudah dapat diganti temanya
 
-dan ini merupakan code full nya
 
-import 'package:english_words/english_words.dart';
-import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+	import 'package:english_words/english_words.dart';
+	import 'package:flutter/material.dart';
 
-// #docregion MyApp
-class MyApp extends StatelessWidget {
-// #docregion build
-@override
-Widget build(BuildContext context) {
+	void main() => runApp(MyApp());
+
+	// #docregion MyApp
+	class MyApp extends StatelessWidget {
+	// #docregion build
+	@override
+	Widget build(BuildContext context) {
 	return MaterialApp(
  	title: 'Startup Name Generator',
-  home: RandomWords(),
+  	home: RandomWords(),
 	);
-}
- // #enddocregion build
-}
-// #enddocregion MyApp
+	}
+	 // #enddocregion build
+	}
+	// #enddocregion MyApp
 
-// #docregion RWS-var
-class _RandomWordsState extends State<RandomWords> {
-final _suggestions = <WordPair>[];
-final _biggerFont = const TextStyle(fontSize: 18.0);
-// #enddocregion RWS-var
+	// #docregion RWS-var
+	class _RandomWordsState extends State<RandomWords> {
+	final _suggestions = <WordPair>[];
+	final _biggerFont = const TextStyle(fontSize: 18.0);
+	// #enddocregion RWS-var
 
-// #docregion _buildSuggestions
-Widget _buildSuggestions() {
+	// #docregion _buildSuggestions
+	Widget _buildSuggestions() {
 	return ListView.builder(
     	padding: const EdgeInsets.all(16.0),
     	itemBuilder: /*1*/ (context, i) {
@@ -189,39 +189,39 @@ Widget _buildSuggestions() {
       	}
      	 return _buildRow(_suggestions[index]);
     	});
-}
-// #enddocregion _buildSuggestions
+	}
+	// #enddocregion _buildSuggestions
 
-// #docregion _buildRow
-Widget _buildRow(WordPair pair) {
+	// #docregion _buildRow
+	Widget _buildRow(WordPair pair) {
 	return ListTile(
   	title: Text(
     	pair.asPascalCase,
     	style: _biggerFont,
   	),
 	);
-}
- // #enddocregion _buildRow
+	}
+ 	// #enddocregion _buildRow
 
-// #docregion RWS-build
-@override
-Widget build(BuildContext context) {
- return Scaffold(
+	// #docregion RWS-build
+	@override
+		Widget build(BuildContext context) {
+	 return Scaffold(
  	 appBar: AppBar(
     	title: const Text('Startup Name Generator'),
   	),
   	body: _buildSuggestions(),
 	);
-}
-// #enddocregion RWS-build
-// #docregion RWS-var
-}
-// #enddocregion RWS-var
+	}
+	// #enddocregion RWS-build
+	// #docregion RWS-var
+	}
+	// #enddocregion RWS-var
 
-class RandomWords extends StatefulWidget {
- @override
-State<RandomWords> createState() => _RandomWordsState();
-}
+	class RandomWords extends StatefulWidget {
+	 @override
+	State<RandomWords> createState() => _RandomWordsState();
+	}
 Sejauh ini kita telah menjalankan aplikasi Anda dalam mode debug . Mode debug memperdagangkan kinerja untuk fitur pengembang yang berguna seperti hot reload dan step debugging. Bukan hal yang tidak terduga untuk melihat kinerja yang lambat dan animasi yang tersendat-sendat dalam mode debug. Setelah Anda siap untuk menganalisis kinerja atau merilis aplikasi, Anda dapat menggunakan mode build "profil" atau "rilis" Flutter.\
   
 # Write Your First Flutter App, part 2
@@ -234,8 +234,8 @@ Dalam codelab ini, Anda akan memperluas aplikasi Flutter seluler dasar untuk men
     
 	add a _saved Set to _RandomWordsState. This Set stores the word pairings that the user favorited. Set is preferred to List because a properly implemented Set doesn't         allow duplicate entries.
 	class _RandomWordsState extends State<RandomWords> {
-  final _suggestions = <WordPair>[];
-  final _saved = <WordPair>{};     // NEW
-  final _biggerFont = TextStyle(fontSize: 18.0);
-  ...
-}
+  	final _suggestions = <WordPair>[];
+  	final _saved = <WordPair>{};     // NEW
+  	final _biggerFont = TextStyle(fontSize: 18.0);
+  	...
+	}
