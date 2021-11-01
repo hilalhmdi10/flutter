@@ -19,13 +19,7 @@ Setiap aplikasi Flutter yang Anda buat juga dikompilasi untuk web. Di IDE Anda d
 
   Ganti konten lib/main.dart. Hapus semua kode dari lib/main.dart. Ganti dengan kode berikut, yang menampilkan "Hello World" di tengah layar.
   
-  // Copyright 2018 The Flutter team. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// Copyright 2018 The Flutter team. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+ 
 
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
