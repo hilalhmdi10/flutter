@@ -107,8 +107,8 @@ Jika app di reload maka akan dapat dilihat bedanya sekarang sudah ada icon hati 
 	} 
       });
     },               // ... to here.
-  );
-}
+ 	 );
+	}
 Sekarang jika disentuh maka icon hati akan berubah warna merah tanda item sudah difavoritkan. Membuat aplikasi dapat berpindah dengan "navigator" dengan kode dibwh ini
 
 	class _RandomWordsState extends State<RandomWords> {
