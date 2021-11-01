@@ -17,15 +17,11 @@ Setiap aplikasi Flutter yang Anda buat juga dikompilasi untuk web. Di IDE Anda d
   
   sebagian besar akan mengedit lib/main.dart, tempat kode Dart berada.
 
-  Ganti konten lib/main.dart. Hapus semua kode dari lib/main.dart. Ganti dengan kode berikut, yang menampilkan "Hello World" di tengah layar.
-  
+  Ganti konten lib/main.dart. Hapus semua kode dari lib/main.dart. Ganti dengan kode berikut, yang menampilkan "Hello World" di tengah layar\
  
-
-import 'package:flutter/material.dart';
-
-   void main() => runApp(MyApp());
-
-  class MyApp extends StatelessWidget {
+	import 'package:flutter/material.dart';
+   	void main() => runApp(MyApp());
+ 	 class MyApp extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
       return MaterialApp(
